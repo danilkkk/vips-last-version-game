@@ -77,7 +77,7 @@ const model = {
   },
 
   setTime(newTime) {
-    this._userData._time = +newTime;
+    this._userData._time = +newTime || 0;
   },
 
   incrementTime(gameTime) {
@@ -89,7 +89,7 @@ const model = {
   },
 
   setGames(games) {
-    this._userData._games = +games;
+    this._userData._games = +games || 0;
   },
 
   getGames() {
