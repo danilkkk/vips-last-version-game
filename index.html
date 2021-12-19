@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Фигуры</title>
+    <link rel="shortcut icon" href="img/rubik.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="welcome-screen screen visible js-welcome-screen">
+        <h1 class="gameName">ФИГУРЫ</h1>
+        <div class="wrapper"></div>
+
+        <button class="custom-btn btn-5 big js-start-btn"><span>Начать</span></button>
+    </div>
+
+    <div class="authorization-screen screen js-authorization-screen">
+        <div class="centering"></div>
+        <label for="inp" class="inp" class="label-for-name">
+            <input type="text" class="js-nic-input" id="inp" placeholder="&nbsp;">
+            <span class="label">Введите свой ник</span>
+            <span class="focus-bg"></span>
+        </label>
+
+        <div class="wrapper"></div>
+
+        <button class="custom-btn small btn-5 js-tomenu-btn"><span>Далее</span></button>
+
+    </div>
+
+    <div class="menu-screen screen js-menu-screen">
+        <h1 class="gameName">ФИГУРЫ</h1>
+
+        <div class="wrapper"></div>
+
+        <main class="js-mode-btn-container">
+            <button class="js-easy-mode"><span>Легкий уровень</span></button>
+            <button class="js-middle-mode">Средний уровень</button>
+            <button class="js-hard-mode">Hardcore</button>
+        </main>
+
+        <div class="wrapper"></div>
+        <div class="bottom-btns">
+            <div class="bottom-btns__div">
+                <h3 class="js-change-theme theme-btn">Сменить тему</h3>
+            </div>
+            <div class="bottom-btns__div">
+                <h3 class="js-menu-to-result theme-btn">Таблица</h3>
+            </div>
+            <div class="bottom-btns__div">
+                <h3 class="js-logout theme-btn">Выйти</h3>
+            </div>
+        </div>
+    </div>
+
+    <div class="game-screen screen js-game-screen">
+        <div class="time-container">
+            <p class="timer js-timer">
+                13:04
+            </p>
+        </div>
+
+        <section class="game-subscreen js-game-sub-first-level">
+            <div class="img-container js-img-container-first">
+
+            </div>
+
+            <div class="qusetion-container">
+                <p class="question js-question-1"></p>
+            </div>
+
+            <div class="answer-container">
+                <form class="js-answer-form-1">
+                    <input type="number" class="js-answer-input-1 answer-input" placeholder="Ваш ответ здесь..."
+                        name="answer" />
+                    <button class="answer-btn"><span>Ответить</span></button>
+                </form>
+            </div>
+        </section>
+
+        <section class="game-subscreen js-game-sub-second-level">
+            <div class="img-container js-img-container-second">
+
+            </div>
+
+            <div class="qusetion-container">
+                <p class="question js-question-2"></p>
+            </div>
+
+            <div class="answer-container">
+                <form class="js-answer-form-2">
+                    <input type="number" class="js-answer-input-2 answer-input" placeholder="Ваш ответ здесь..."
+                        name="answer" />
+                    <button class="answer-btn"><span>Ответить</span></button>
+                </form>
+            </div>
+        </section>
+
+        <section class="game-subscreen js-game-sub-third-level js-img-container-third">
+            <div class="img-container">
+
+            </div>
+
+            <div class="qusetion-container">
+                <p class="question js-question-3"></p>
+            </div>
+
+            <div class="answer-container">
+                <form class="js-answer-form-3">
+                    <input type="number" class="js-answer-input answer-input-3" placeholder="Ваш ответ здесь..."
+                        name="answer" />
+                    <button class="answer-btn"><span>Ответить</span></button>
+                </form>
+            </div>
+        </section>
+    </div>
+
+    <div class="wrong-answ-message js-wrong-answ">
+        <p class="wrong-answ-message-text">Неправильно!</p>
+    </div>
+
+    <div class="game-over-screen screen js-game-over-screen">
+        <h1 class="game-over">GAME OVER!</h1>
+        <div class="wrapper"></div>
+        <p class="score js-score">
+            SCORE: 13
+        </p>
+        <div class="wrapper"></div>
+
+        <button class="custom-btn btn-5 big js-gameover-to-menu-btn"><span>Меню</span></button>
+    </div>
+
+
+    <div class="results-screen screen js-result-screen">
+        <h1 class="gameName">ОБЩИЙ ЗАЧЕТ</h1>
+        <div class="wrapper"></div>
+
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Ник</th>
+                    <th>Количество игр</th>
+                    <th>Время в игре</th>
+                    <th>Очки</th>
+                </tr>
+            </thead>
+            <tbody class="js-tbody">
+                <tr>
+                    <td>Антон</td>
+                    <td>3</td>
+                    <td>00:00:00</td>
+                    <td>345</td>
+                </tr>
+            </tbody>
+        </table>
+        <div class="wrapper"></div>
+
+        <button class="custom-btn btn-5 big js-result-to-menu-btn"><span>Меню</span></button>
+    </div>
+
+    <div class="nicname-field field">
+        <p class=" nicname-field__nicname js-nicname">ИМЯ</p>
+    </div>
+
+    <div class="score-field field">
+        <p class=" nicname-field__nicname js-total">TOTAL: 0</p>
+    </div>
+
+    <h4 class="me">&copy; Created by Daniel K. 2022</h4>
+
+
+    <script src="globalVariable.js"></script>
+    <script src="model.js"></script>
+    <script src="main.js"></script>
+    <script src="processGame.js"></script>
+    <script src="figures.js"></script>
+</body>
+
+</html>
