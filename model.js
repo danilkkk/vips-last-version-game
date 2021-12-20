@@ -62,6 +62,7 @@ const model = {
       this.logger.log("user data udpdated from LocalStorage");
       const [score, time, games] = data.split(";");
       this._initUser(nicname, score, time, games);
+      model.saveUserDataToLocalStorage();
       return;
     }
 
