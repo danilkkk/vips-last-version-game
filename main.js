@@ -98,7 +98,7 @@ function setScore() {
 
 window.onstorage = (event) => {
   if (event.key === model.getNicName()) {
-    model.setScore(event.newValue);
+    model.tryGetUserDataFromLocalStorage(model.getNicName());
     setScore();
   }
 
@@ -171,15 +171,33 @@ function createTr([nicname, score, time, games]) {
   tr.append(tdName);
 
   const tdGames = document.createElement("td");
-  tdGames.textContent = games;
+
+  if (games) {
+    tdGames.textContent = games;
+  } else {
+    tdGames.textContent = 'неизвестно';
+  }
+
   tr.append(tdGames);
 
   const tdTime = document.createElement("td");
-  tdTime.textContent = formattingTime(time);
+
+  if (time) {
+    tdTime.textContent = formattingTime(time);
+  } else {
+    tdTime.textContent = 'неизвестно';
+  }
+
   tr.append(tdTime);
 
   const tdScore = document.createElement("td");
-  tdScore.textContent = score;
+
+  if (score) {
+    tdScore.textContent = score;
+  } else {
+    tdScore.textContent = 'неизвестно';
+  }
+
   tr.append(tdScore);
 
   return tr;
