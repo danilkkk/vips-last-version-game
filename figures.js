@@ -8,6 +8,8 @@ let NUMBER_OF_FIGURES_IN_QUESTION = 18;
 
 let currentFiguresArray = [];
 
+// just
+
 const FIGURES = [
   {
     CLIENT_NAME: "кругов",
